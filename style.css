@@ -223,3 +223,21 @@ footer {
         gap: 1rem;
     }
 }
+
+/* - EXTRAS -*/
+
+nav ul li a.active {
+    color: #60a5fa;
+    position: relative;
+}
+
+nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #60a5fa;
+    border-radius: 2px;
+}
