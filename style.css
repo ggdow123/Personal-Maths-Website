@@ -80,17 +80,21 @@ nav a {
     }
 }
 
-/* hero content animation */
+/* hero content animation (UPDATED ONLY PART) */
 .hero-content {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
     animation: heroFade 1.2s ease forwards;
 }
 
 @keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-20px);
     }
 }
 
