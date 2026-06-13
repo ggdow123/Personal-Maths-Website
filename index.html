@@ -20,177 +20,128 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 <body>
 
-    <div class="page-fade"></div>
-    
+<div class="page-fade"></div>
+
 <!-- NAV -->
 <nav>
     <a href="index.html" class="logo">
         <img src="images/favicon.png" alt="Home">
     </a>
-
-    <!-- Hamburger icon for mobile -->
-    <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <div class="nav-menu">
-        <ul>
-            <!-- index.html links (keep exactly as you have them) -->
-            <li><a href="#about">About</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="tutoring.html">Tutoring</a></li>
-        </ul>
-    </div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="tutoring.html">Tutoring</a></li>
+    </ul>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
-
     <div class="hero-content">
-
         <img class="main-logo" src="images/favicon-transparent.png" alt="Logo">
-
         <h1>George Dow</h1>
-
         <p>
             University of Bristol Mathematics student and tutor
         </p>
-
         <a href="tutoring.html" class="btn">
             Maths Tutoring
         </a>
-
     </div>
-
 </header>
 
 <!-- MAIN CONTENT -->
 <div class="container">
 
-<!-- ABOUT -->
-<section id="about">
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a second year student at the University of Bristol studying Mathematics.
+            I specialise in analysis and stochastic analysis and I have an upcoming Markov chains and electric networks project.
+        </p>
+        <br>
+        <p>
+            Outside university I enjoy cycle touring and travelling, which I fund through tutoring work and work at the University of Exeter.
+            More recently I’ve also been exploring whether my statistical knowledge can be applied to the stock market!
+        </p>
+    </section>
 
-    <h2>About Me</h2>
-
-    <p>
-        I am a second year student at the University of Bristol studying Mathematics.
-        I specialise in analysis and stochastic analysis and I have an upcoming Markov chains and electric networks project.
-    </p>
-    
-    <br>
-    
-    <p>
-        Outside university I enjoy cycle touring and travelling, which I fund through tutoring work and work at the University of Exeter.
-        More recently I’ve also been exploring whether my statistical knowledge can be applied to the stock market!
-    </p>
-
-</section>
-
-<!-- INTERESTS -->
-<section id="interests">
-
-    <h2>Interests in Maths</h2>
-
-    <div class="interest-grid">
-
-        <div class="card">
-            <i class="fas fa-area-chart"></i>
-            <h3>Analysis</h3>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Stochastic Analysis</h3>
-        </div>
-
-        <div class="card">
-
-            <div class="chalk-icon">
-                <svg viewBox="0 0 100 100" width="60" height="60">
-                    <text x="50" y="70"
-                          text-anchor="middle"
-                          font-size="70"
-                          fill="none"
-                          stroke="white"
-                          stroke-width="2"
-                          font-family="serif">
-                        P
-                    </text>
-                </svg>
+    <!-- INTERESTS -->
+    <section id="interests">
+        <h2>Interests in Maths</h2>
+        <div class="interest-grid">
+            <div class="card">
+                <i class="fas fa-area-chart"></i>
+                <h3>Analysis</h3>
             </div>
-
-            <h3>Probability</h3>
-
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Stochastic Analysis</h3>
+            </div>
+            <div class="card">
+                <div class="chalk-icon">
+                    <svg viewBox="0 0 100 100" width="60" height="60">
+                        <text x="50" y="70"
+                              text-anchor="middle"
+                              font-size="70"
+                              fill="none"
+                              stroke="white"
+                              stroke-width="2"
+                              font-family="serif">
+                            P
+                        </text>
+                    </svg>
+                </div>
+                <h3>Probability</h3>
+            </div>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-
-    <h2>Gallery</h2>
-
-    <div class="image-gallery">
-
-        <div class="image-item">
-            <img src="images/044.JPG" alt="">
+    <!-- GALLERY -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="images/044.JPG" alt="">
+            </div>
+            <div class="image-item">
+                <img src="images/photo1.jpg" alt="">
+            </div>
+            <div class="image-item">
+                <img src="images/photo2.jpg" alt="">
+            </div>
         </div>
+    </section>
 
-        <div class="image-item">
-            <img src="images/photo1.jpg" alt="">
-        </div>
-
-        <div class="image-item">
-            <img src="images/photo2.jpg" alt="">
-        </div>
-
-    </div>
-
-</section>
-
-<!-- TUTORING -->
-<section>
-
-    <h2>Tutoring</h2>
-
-    <p>
-        I currently tutor several students and previously ran the junior school
-        maths club in sixth form. I offer tutoring for all levels up to A-level Maths,
-        both online and in person.
-    </p>
-
-    <a href="tutoring.html" class="btn">
-        Learn More
-    </a>
-
-</section>
+    <!-- TUTORING -->
+    <section>
+        <h2>Tutoring</h2>
+        <p>
+            I currently tutor several students and previously ran the junior school
+            maths club in sixth form. I offer tutoring for all levels up to A-level Maths,
+            both online and in person.
+        </p>
+        <a href="tutoring.html" class="btn">
+            Learn More
+        </a>
+    </section>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
-
     <p>
         Contact:
         <a href="mailto:glider.toga-7q@icloud.com">
             glider.toga-7q@icloud.com
         </a>
     </p>
-
     <p>
         (This email forwards to help manage spam/bots)
     </p>
-
     <p>© 2026 George Dow. All rights reserved.</p>
-
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
