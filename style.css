@@ -241,3 +241,7 @@ nav ul li a.active::after {
     background: #60a5fa;
     border-radius: 2px;
 }
+
+nav ul li a {
+    transition: color 0.2s ease;
+}
