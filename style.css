@@ -108,7 +108,7 @@ nav a {
     }
     to {
         opacity: 1;
-        transform: translateY(-20px);
+        transform: translateY(-40px);   /* was -20px; now moved up a bit */
     }
 }
 
@@ -272,77 +272,42 @@ body.loaded .page-fade {
     opacity: 0;
 }
 
-/* ---------------- MOBILE MENU ---------------- */
+/* ---------------- RESPONSIVE (no hamburger) ---------------- */
 
 @media (max-width: 768px) {
 
-    /* --- Hamburger button --- */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 28px;
-        height: 22px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 1001;
+    /* Nav wraps instead of overlapping */
+    nav {
+        height: auto;                     /* let the height grow */
+        flex-wrap: wrap;
+        padding: 1rem 5%;
     }
 
-    .hamburger span {
-        display: block;
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
         width: 100%;
-        height: 3px;
-        background: white;
-        border-radius: 2px;
-        transition: all 0.3s ease;
+        margin-top: 0.6rem;
     }
 
-    /* --- Hide the menu by default --- */
-    .nav-menu {
-        position: fixed;
-        top: 70px;               /* height of your nav */
-        left: 0;
-        width: 100%;
-        background: rgba(15, 23, 42, 0.97);
-        backdrop-filter: blur(10px);
-        padding: 2rem 5%;
-        transform: translateY(-120%);
-        transition: transform 0.3s ease;
-        z-index: 999;
+    .logo img {
+        width: 32px;
+        height: 32px;
     }
 
-    .nav-menu ul {
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
+    nav a {
+        font-size: 0.95rem;
     }
 
-    .nav-menu.open {
-        transform: translateY(0);
-    }
-
-    /* --- Animate hamburger to X when open --- */
-    .hamburger.open span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .hamburger.open span:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.open span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* --- Hero typography (fixes tutoring title/subtitle) --- */
+    /* Typography you already liked */
     .hero h1 {
-        font-size: 2.5rem;       /* down from 4rem */
+        font-size: 2.5rem;
     }
 
     .hero p {
         font-size: 1rem;
         padding: 0 1rem;
-        word-wrap: break-word;
     }
 
     .hero-content {
