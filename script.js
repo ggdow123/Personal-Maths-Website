@@ -67,23 +67,3 @@ document.querySelectorAll("a").forEach(link => {
         });
     }
 });
-
-// ------------------- MOBILE MENU TOGGLE -------------------
-
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navMenu.classList.toggle('open');
-    });
-
-    // Close menu when a link is clicked (optional, but smoother)
-    navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            navMenu.classList.remove('open');
-        });
-    });
-}
