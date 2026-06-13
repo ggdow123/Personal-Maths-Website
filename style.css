@@ -101,6 +101,7 @@ nav a {
     animation: heroFade 1.2s ease forwards;
 }
 
+/* Home page – text moved up a bit */
 @keyframes heroFade {
     from {
         opacity: 0;
@@ -108,7 +109,23 @@ nav a {
     }
     to {
         opacity: 1;
-        transform: translateY(-40px);   /* text moved up a bit */
+        transform: translateY(-40px);   /* raised for home page */
+    }
+}
+
+/* Tutoring page – text sits lower, more centred */
+.hero-tutoring .hero-content {
+    animation-name: heroFadeTutoring;
+}
+
+@keyframes heroFadeTutoring {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-10px);   /* only slightly lifted, mostly centred */
     }
 }
 
@@ -276,25 +293,19 @@ body.loaded .page-fade {
 
 @media (max-width: 768px) {
 
-    /* keep body padding equal to nav height (single row) */
     body {
         padding-top: 70px;
     }
 
-    /* reduce horizontal padding to give the links more room */
     nav {
         padding: 0 3%;
     }
 
-    /* pack the links closer together and slightly smaller */
     nav ul {
         gap: 0.6rem;
         font-size: 0.85rem;
     }
 
-    /* do NOT shrink the logo — keep it at original size (inherits 38px) */
-
-    /* typography you already liked */
     .hero h1 {
         font-size: 2.5rem;
     }
