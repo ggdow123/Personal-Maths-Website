@@ -52,10 +52,22 @@ nav a{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:6rem;
+    padding:60px 2rem;
     background:
     radial-gradient(circle at top right,#2563eb33,transparent),
     radial-gradient(circle at bottom left,#7c3aed33,transparent);
+}
+
+.hero-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    transform: translateY(-30px);
+
 }
 
 .hero h1{
