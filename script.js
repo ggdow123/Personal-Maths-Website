@@ -1,6 +1,11 @@
+// ------------------- PAGE READY -------------------
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Biography site loaded successfully.");
 });
+
+
+// ------------------- SCROLL SPY -------------------
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
@@ -12,8 +17,10 @@ window.addEventListener("scroll", () => {
         const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.clientHeight;
 
-        if (pageYOffset >= sectionTop &&
-            pageYOffset < sectionTop + sectionHeight) {
+        if (
+            pageYOffset >= sectionTop &&
+            pageYOffset < sectionTop + sectionHeight
+        ) {
             current = section.getAttribute("id");
         }
     });
@@ -27,26 +34,36 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Fade in when page loads
-window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
+
+// ------------------- FADE IN ON LOAD -------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    requestAnimationFrame(() => {
+        document.body.classList.add("loaded");
+    });
 });
 
 
-// Fade out when clicking links
+// ------------------- FADE OUT ON NAVIGATION -------------------
+
 document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
 
-    // only apply to internal page links (not anchors or mailto)
-    if (href && !href.startsWith("#") && !href.startsWith("mailto")) {
-        link.addEventListener("click", function (e) {
+    const isInternalPage =
+        href &&
+        !href.startsWith("#") &&
+        !href.startsWith("mailto") &&
+        !href.startsWith("http");
+
+    if (isInternalPage) {
+        link.addEventListener("click", (e) => {
             e.preventDefault();
 
             document.body.classList.remove("loaded");
 
             setTimeout(() => {
                 window.location.href = href;
-            }, 500);
+            }, 450);
         });
     }
 });
