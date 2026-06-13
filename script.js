@@ -26,3 +26,27 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+// Fade in when page loads
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+
+
+// Fade out when clicking links
+document.querySelectorAll("a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    // only apply to internal page links (not anchors or mailto)
+    if (href && !href.startsWith("#") && !href.startsWith("mailto")) {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            document.body.classList.remove("loaded");
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        });
+    }
+});
