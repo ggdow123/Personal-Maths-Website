@@ -1,85 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta charset="UTF-8">
+<title>George Dow | Mathematics</title>
+<meta name="description" content="George Dow - Mathematics student, researcher and tutor.">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/favicon.png">
 
-    <!-- Favicon -->
+<link rel="stylesheet" href="style.css">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>George Dow - About Me</title>
-    <meta name="description" content="A summary of my work in maths">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
 
-        <header>
-            <h1><i class="fas fa-user"></i> George Dow </h1>
-            <p class="subtitle">About me and my current work in maths</p>
-        </header>
+<nav>
+    <div class="logo">George Dow</div>
 
-        <!-- BIO SECTION -->
-        <section>
-            <h2><i class="fas fa-book"></i> About Me</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="tutoring.html">Tutoring</a></li>
+    </ul>
+</nav>
 
-            <div class="bio-preview">
-                <p>I am a second year student at the University of Bristol studying Mathematics.
-                   I am specialising in analysis and stochastic analysis with an upcoming markov chains and electric networks project.
-                   Outside of university I enjoy cycle touring and travelling which I fund through tutoring work, working at The University of Exeter and more recently,
-                   seeing if my statistics knowledge helps on the stock market!</p>
+<header class="hero">
 
-            </div>
-        </section>
-            
-        <!-- TUTORING SECTION -->
-            
-        <section>
-            <h2></i> Tutoring </h2>
+    <div class="hero-content">
 
-             <div class="bio-preview">           
-                <p>I tutor 3 students currently and used to run the junior school maths club whilst I was in 6th form.
-                   If you are from Devon and looking to get in touch I can be contacted through glider.toga-7q@icloud.com
-                   (not my actual email but forwards to me).</p>
+        <h1>Mathematics Student & Tutor</h1>
 
-                 </div>
-        </section>
+        <p>
+            University of Bristol mathematics student specialising in
+            analysis, stochastic processes and probability.
+        </p>
 
-        <!-- IMAGES SECTION -->
-        <section>
-
-            <div class="image-gallery">
-
-                <div class="image-item">
-                    <img src="images/044.JPG" alt="044">
-                </div>
-
-                <div class="image-item">
-                    <img src="images/photo1.jpg" alt="Photo 1">
-                </div>
-
-                <div class="image-item">
-                    <img src="images/photo2.jpg" alt="Photo 2">
-                </div>
-
-            </div>
-        </section>
-
+        <a href="tutoring.html" class="btn">
+            Maths Tutoring
+        </a>
 
     </div>
 
-    <script src="script.js"></script>
+</header>
+
+<div class="container">
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am a second-year Mathematics student at the University of Bristol.
+        My current interests lie in analysis, stochastic analysis and probability.
+        I will soon be undertaking a project involving Markov chains and electric networks.
+    </p>
+
+    <p>
+        Outside of mathematics I enjoy cycle touring and travelling.
+        Alongside my studies I work as a mathematics tutor and have also worked
+        with the University of Exeter.
+    </p>
+
+</section>
+
+<section id="interests">
+
+    <h2>Current Interests</h2>
+
+    <div class="interest-grid">
+
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Stochastic Analysis</h3>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Markov Chains</h3>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-bolt"></i>
+            <h3>Electric Networks</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="gallery">
+
+    <h2>Gallery</h2>
+
+    <div class="image-gallery">
+
+        <div class="image-item">
+            <img src="images/044.JPG" alt="">
+        </div>
+
+        <div class="image-item">
+            <img src="images/photo1.jpg" alt="">
+        </div>
+
+        <div class="image-item">
+            <img src="images/photo2.jpg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Tutoring</h2>
+
+    <p>
+        I currently tutor several students and previously ran a junior school
+        mathematics club. I offer personalised support for GCSE and A-Level
+        Mathematics.
+    </p>
+
+    <a href="tutoring.html" class="btn">
+        Learn More
+    </a>
+
+</section>
+
+</div>
+
+<footer>
+
+    <p>
+        Contact:
+        <a href="mailto:glider.toga-7q@icloud.com">
+            glider.toga-7q@icloud.com
+        </a>
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
