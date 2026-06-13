@@ -171,3 +171,8 @@ html {
     scroll-padding-top: 90px;
 }
 
+.hero-logo img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
