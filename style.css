@@ -170,3 +170,10 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
 }
+
+.home-logo {
+  display: block;
+  margin: 20px auto 10px auto; /* centres horizontally */
+  width: 120px; /* adjust if needed */
+  height: auto;
+}
