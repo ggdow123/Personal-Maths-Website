@@ -35,7 +35,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-// ------------------- FADE IN ON LOAD -------------------
+// ------------------- FADE IN -------------------
 
 document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(() => {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ------------------- FADE OUT ON NAVIGATION -------------------
+// ------------------- FADE OUT NAVIGATION -------------------
 
 document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
