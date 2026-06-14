@@ -35,14 +35,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    /*
-      Align the logo with the left edge of the centred content boxes.
-      The container is width: min(1100px, 90%).
-      So left/right space = (100% - min(1100px, 90%)) / 2.
-      We cap it at a minimum of 20px so it doesn't become zero on tiny screens.
-    */
-    padding: 0 max(20px, calc((100% - min(1100px, 90%)) / 2));
-
+    padding: 0 5%;
     background: rgba(15, 23, 42, 0.9);
     backdrop-filter: blur(10px);
     z-index: 1000;
