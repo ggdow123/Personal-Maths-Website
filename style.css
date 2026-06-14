@@ -283,7 +283,7 @@ footer a:hover {
     color: #ffffff;
 }
 
-/* ---------------- LOGO ---------------- */
+/* ---------------- LOGO (NAV) ---------------- */
 
 .logo img {
     width: 38px;
@@ -292,24 +292,20 @@ footer a:hover {
     display: block;
 }
 
-/* ---------------- HERO PHOTO (FULL RECTANGLE, NOT CIRCULAR) ---------------- */
+/* ---------------- HERO PHOTO (FULL RECTANGLE, NOW LARGER) ---------------- */
 
 .hero-photo {
-    width: 160px;
-    height: auto !important;               /* ensure auto height */
+    width: 240px;                          /* increased from 160px */
+    height: auto !important;
     max-width: 100%;
     display: block;
     margin: 0 auto 1.5rem auto;
 
-    object-fit: contain !important;        /* show whole image */
+    object-fit: contain !important;
     border: 3px solid rgba(255, 255, 255, 0.25);
-    border-radius: 12px !important;        /* NOT circular – soft rectangle */
+    border-radius: 12px !important;
     box-shadow: 0 0 30px rgba(37, 99, 235, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    /* Override any sneaky global img rules */
-    clip-path: none !important;
-    shape-outside: none !important;
 }
 
 .hero-photo:hover {
@@ -317,14 +313,14 @@ footer a:hover {
     box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
 }
 
-/* ---------------- MAIN LOGO (now halfway between button and bottom edge) ---------------- */
+/* ---------------- MAIN LOGO (NOW LOWER, TRULY HALFWAY) ---------------- */
 
 .main-logo {
     width: 180px;
     height: auto;
     max-width: 180px;
     display: block;
-    margin: 15vh auto 0 auto;      /* pushes it halfway down the remaining space */
+    margin: 25vh auto 0 auto;      /* pushed further down */
     opacity: 0.8;
     transition: opacity 0.3s;
 }
@@ -404,16 +400,16 @@ body.loaded .page-fade {
         padding: 0 1rem;
     }
 
+    .hero-photo {
+        width: 180px;             /* larger on mobile too */
+        height: auto !important;
+        border-radius: 12px !important;
+    }
+
     .main-logo {
         width: 130px;
         max-width: 130px;
-        margin-top: 10vh;   /* slightly less on mobile */
-    }
-
-    .hero-photo {
-        width: 130px;
-        height: auto !important;
-        border-radius: 12px !important;
+        margin-top: 15vh;        /* slightly less on mobile */
     }
 
     section {
