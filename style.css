@@ -292,10 +292,10 @@ footer a:hover {
     display: block;
 }
 
-/* ---------------- HERO PHOTO (FULL RECTANGLE, NOW LARGER) ---------------- */
+/* ---------------- HERO PHOTO (FULL RECTANGLE, LARGE) ---------------- */
 
 .hero-photo {
-    width: 240px;                          /* increased from 160px */
+    width: 240px;
     height: auto !important;
     max-width: 100%;
     display: block;
@@ -313,14 +313,14 @@ footer a:hover {
     box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
 }
 
-/* ---------------- MAIN LOGO (NOW LOWER, TRULY HALFWAY) ---------------- */
+/* ---------------- MAIN LOGO (FIXED GAP BELOW BUTTON) ---------------- */
 
 .main-logo {
     width: 180px;
     height: auto;
     max-width: 180px;
     display: block;
-    margin: 25vh auto 0 auto;      /* pushed further down */
+    margin: 3rem auto 0 auto;      /* consistent spacing – not dependent on viewport height */
     opacity: 0.8;
     transition: opacity 0.3s;
 }
@@ -401,7 +401,7 @@ body.loaded .page-fade {
     }
 
     .hero-photo {
-        width: 180px;             /* larger on mobile too */
+        width: 180px;
         height: auto !important;
         border-radius: 12px !important;
     }
@@ -409,7 +409,7 @@ body.loaded .page-fade {
     .main-logo {
         width: 130px;
         max-width: 130px;
-        margin-top: 15vh;        /* slightly less on mobile */
+        margin-top: 2.5rem;       /* fixed gap, slightly smaller on mobile */
     }
 
     section {
