@@ -209,6 +209,7 @@ section {
 .image-item {
     overflow: hidden;
     border-radius: 16px;
+    position: relative;        /* needed for caption positioning if you choose overlay later */
 }
 
 .image-item img {
@@ -219,6 +220,17 @@ section {
 
 .image-item:hover img {
     transform: scale(1.08);
+}
+
+/* --- Caption (always visible, sits below image) --- */
+.caption {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background: rgba(15, 23, 42, 0.7);   /* dark, semi‑transparent bar */
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 0 0 16px 16px;        /* only bottom corners rounded */
 }
 
 /* ---------------- FOOTER ---------------- */
