@@ -54,7 +54,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #93c5fd;               /* softer blue on hover */
+    color: #93c5fd;
     text-shadow: 0 0 8px rgba(147, 197, 253, 0.5);
 }
 
@@ -292,20 +292,24 @@ footer a:hover {
     display: block;
 }
 
-/* ---------------- HERO PHOTO (full rectangular image with border) ---------------- */
+/* ---------------- HERO PHOTO (FULL RECTANGLE, NOT CIRCULAR) ---------------- */
 
 .hero-photo {
     width: 160px;
-    height: auto;
+    height: auto !important;               /* ensure auto height */
     max-width: 100%;
     display: block;
     margin: 0 auto 1.5rem auto;
 
-    object-fit: contain;            /* show whole image, no cropping */
+    object-fit: contain !important;        /* show whole image */
     border: 3px solid rgba(255, 255, 255, 0.25);
-    border-radius: 12px;            /* soft rounded corners — NOT circular */
+    border-radius: 12px !important;        /* NOT circular – soft rectangle */
     box-shadow: 0 0 30px rgba(37, 99, 235, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Override any sneaky global img rules */
+    clip-path: none !important;
+    shape-outside: none !important;
 }
 
 .hero-photo:hover {
@@ -313,14 +317,14 @@ footer a:hover {
     box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
 }
 
-/* ---------------- MAIN LOGO (transparent, below button) ---------------- */
+/* ---------------- MAIN LOGO (now halfway between button and bottom edge) ---------------- */
 
 .main-logo {
     width: 180px;
     height: auto;
     max-width: 180px;
     display: block;
-    margin: 2.5rem auto 0 auto;
+    margin: 15vh auto 0 auto;      /* pushes it halfway down the remaining space */
     opacity: 0.8;
     transition: opacity 0.3s;
 }
@@ -403,10 +407,13 @@ body.loaded .page-fade {
     .main-logo {
         width: 130px;
         max-width: 130px;
+        margin-top: 10vh;   /* slightly less on mobile */
     }
 
     .hero-photo {
-        width: 130px;          /* smaller on phones */
+        width: 130px;
+        height: auto !important;
+        border-radius: 12px !important;
     }
 
     section {
