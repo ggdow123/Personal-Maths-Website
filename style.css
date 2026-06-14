@@ -109,7 +109,7 @@ nav a {
     }
     to {
         opacity: 1;
-        transform: translateY(-40px);   /* raised for home page */
+        transform: translateY(-40px);
     }
 }
 
@@ -125,7 +125,7 @@ nav a {
     }
     to {
         opacity: 1;
-        transform: translateY(-10px);   /* only slightly lifted, mostly centred */
+        transform: translateY(-10px);
     }
 }
 
@@ -209,7 +209,7 @@ section {
 .image-item {
     overflow: hidden;
     border-radius: 16px;
-    position: relative;        /* needed for caption positioning if you choose overlay later */
+    position: relative;
 }
 
 .image-item img {
@@ -226,11 +226,11 @@ section {
 .caption {
     margin: 0;
     padding: 0.75rem 1rem;
-    background: rgba(15, 23, 42, 0.7);   /* dark, semi‑transparent bar */
+    background: rgba(15, 23, 42, 0.7);
     color: #e2e8f0;
     font-size: 0.9rem;
     text-align: center;
-    border-radius: 0 0 16px 16px;        /* only bottom corners rounded */
+    border-radius: 0 0 16px 16px;
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -250,22 +250,24 @@ footer {
     display: block;
 }
 
-/* ---------------- HERO PHOTO ---------------- */
+/* ---------------- HERO PHOTO (full image, rectangular with border) ---------------- */
 
 .hero-photo {
     width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;                  /* circular */
+    height: auto;
+    max-width: 100%;
     display: block;
     margin: 0 auto 1.5rem auto;
-    border: 3px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 25px rgba(37, 99, 235, 0.3);
+
+    object-fit: contain;            /* show the whole image */
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;            /* soft rounded corners – set to 0 for sharp */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
 .hero-photo:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* ---------------- MAIN LOGO (transparent, now below the button) ---------------- */
@@ -275,7 +277,7 @@ footer {
     height: auto;
     max-width: 180px;
     display: block;
-    margin: 2.5rem auto 0 auto;   /* extra space above, centred */
+    margin: 2.5rem auto 0 auto;
 }
 
 /* ---------------- NAV ACTIVE ---------------- */
@@ -356,9 +358,7 @@ body.loaded .page-fade {
         max-width: 130px;
     }
 
-    /* Scale down photo on mobile */
     .hero-photo {
         width: 130px;
-        height: 130px;
     }
 }
