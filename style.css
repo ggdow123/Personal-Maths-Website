@@ -250,12 +250,32 @@ footer {
     display: block;
 }
 
+/* ---------------- HERO PHOTO ---------------- */
+
+.hero-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;                  /* circular */
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero-photo:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------- MAIN LOGO (transparent, now below the button) ---------------- */
+
 .main-logo {
     width: 180px;
     height: auto;
     max-width: 180px;
     display: block;
-    margin: 0 auto 1.5rem auto;
+    margin: 2.5rem auto 0 auto;   /* extra space above, centred */
 }
 
 /* ---------------- NAV ACTIVE ---------------- */
@@ -333,5 +353,12 @@ body.loaded .page-fade {
 
     .main-logo {
         width: 130px;
+        max-width: 130px;
+    }
+
+    /* Scale down photo on mobile */
+    .hero-photo {
+        width: 130px;
+        height: 130px;
     }
 }
