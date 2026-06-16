@@ -150,7 +150,6 @@ nav a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: none;   /* gradient text replaces the old shadow */
     filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.4));
 }
 
@@ -342,7 +341,7 @@ footer a:hover {
     transform: rotate(10deg) scale(1.1);
 }
 
-/* ---------------- HERO PHOTO (FULL RECTANGLE, LARGE) ---------------- */
+/* ---------------- HERO PHOTO (NO ANIMATION, STILL RECTANGULAR) ---------------- */
 
 .hero-photo {
     width: 240px;
@@ -353,16 +352,9 @@ footer a:hover {
 
     object-fit: contain !important;
     border: 3px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px !important;            /* slightly more rounded */
+    border-radius: 16px !important;
     box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s;
-
-    animation: floatPhoto 6s ease-in-out infinite;
-}
-
-@keyframes floatPhoto {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
 }
 
 .hero-photo:hover {
@@ -371,7 +363,7 @@ footer a:hover {
     border-color: rgba(37, 99, 235, 0.6);
 }
 
-/* ---------------- MAIN LOGO (above button) ---------------- */
+/* ---------------- MAIN LOGO (SOFTER SHADOW) ---------------- */
 
 .main-logo {
     width: 180px;
@@ -381,12 +373,12 @@ footer a:hover {
     margin: 1.5rem auto 0 auto;
     opacity: 0.8;
     transition: opacity 0.3s, filter 0.3s;
-    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.3));
+    filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.2));   /* dialled back */
 }
 
 .main-logo:hover {
     opacity: 1;
-    filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.6));
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.4));
 }
 
 /* ---------------- NAV ACTIVE ---------------- */
