@@ -19,7 +19,13 @@ body {
     background: #0f172a;
     color: white;
     line-height: 1.7;
-    transition: background 0.4s ease;
+    overflow-x: hidden;
+    animation: bodyPulse 15s ease-in-out infinite alternate;
+}
+
+@keyframes bodyPulse {
+    0% { background-color: #0f172a; }
+    100% { background-color: #111d34; }
 }
 
 /* ---------------- NAV ---------------- */
@@ -36,9 +42,11 @@ nav {
     align-items: center;
 
     padding: 0 5%;
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav ul {
@@ -50,12 +58,15 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
+    font-weight: 400;
+    transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+    display: inline-block;
 }
 
 nav a:hover {
     color: #93c5fd;
-    text-shadow: 0 0 8px rgba(147, 197, 253, 0.5);
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.7);
+    transform: translateY(-1px);
 }
 
 /* ---------------- HERO (HOME) ---------------- */
@@ -135,7 +146,12 @@ nav a:hover {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    text-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+    background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;   /* gradient text replaces the old shadow */
+    filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.4));
 }
 
 .hero p {
@@ -150,7 +166,7 @@ nav a:hover {
 .btn {
     display: inline-block;
     margin-top: 2rem;
-    background: #2563eb;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
     color: white;
     padding: 1rem 2rem;
     border-radius: 12px;
@@ -158,13 +174,34 @@ nav a:hover {
     font-weight: 600;
     letter-spacing: 0.3px;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::after {
+    left: 100%;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    background: #1d4ed8;
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.7);
+}
+
+/* Special overrides for the hero button to sit lower */
+.hero .btn {
+    margin-top: 7rem;          /* pushes button further down */
 }
 
 /* ---------------- LAYOUT ---------------- */
@@ -178,15 +215,16 @@ section {
     margin: 4rem 0;
     padding: 2.5rem 2rem;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
 }
 
 section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(37, 99, 235, 0.1);
+    border-color: rgba(37, 99, 235, 0.2);
 }
 
 /* ---------------- CARDS ---------------- */
@@ -199,24 +237,30 @@ section:hover {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     padding: 2rem;
     text-align: center;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    border-color: rgba(37, 99, 235, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(37, 99, 235, 0.3);
+    border-color: rgba(37, 99, 235, 0.6);
+    background: rgba(37, 99, 235, 0.08);
 }
 
 .card i {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
     color: #60a5fa;
+    transition: transform 0.3s ease;
+}
+
+.card:hover i {
+    transform: scale(1.2);
 }
 
 /* ---------------- GALLERY ---------------- */
@@ -232,12 +276,13 @@ section:hover {
     border-radius: 16px;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
 }
 
 .image-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(37, 99, 235, 0.2);
+    border-color: rgba(37, 99, 235, 0.4);
 }
 
 .image-item img {
@@ -247,13 +292,13 @@ section:hover {
 }
 
 .image-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 .caption {
     margin: 0;
     padding: 0.75rem 1rem;
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(15, 23, 42, 0.85);
     color: #e2e8f0;
     font-size: 0.9rem;
     text-align: center;
@@ -290,6 +335,11 @@ footer a:hover {
     height: 38px;
     object-fit: contain;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: rotate(10deg) scale(1.1);
 }
 
 /* ---------------- HERO PHOTO (FULL RECTANGLE, LARGE) ---------------- */
@@ -302,31 +352,41 @@ footer a:hover {
     margin: 0 auto 1.5rem auto;
 
     object-fit: contain !important;
-    border: 3px solid rgba(255, 255, 255, 0.25);
-    border-radius: 12px !important;
-    box-shadow: 0 0 30px rgba(37, 99, 235, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px !important;            /* slightly more rounded */
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s;
+
+    animation: floatPhoto 6s ease-in-out infinite;
+}
+
+@keyframes floatPhoto {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .hero-photo:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 0 60px rgba(37, 99, 235, 0.6);
+    border-color: rgba(37, 99, 235, 0.6);
 }
 
-/* ---------------- MAIN LOGO (now above the button) ---------------- */
+/* ---------------- MAIN LOGO (above button) ---------------- */
 
 .main-logo {
     width: 180px;
     height: auto;
     max-width: 180px;
     display: block;
-    margin: 1.5rem auto 0 auto;      /* gap above, button's top margin handles below */
+    margin: 1.5rem auto 0 auto;
     opacity: 0.8;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, filter 0.3s;
+    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.3));
 }
 
 .main-logo:hover {
     opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.6));
 }
 
 /* ---------------- NAV ACTIVE ---------------- */
@@ -345,11 +405,7 @@ nav ul li a.active::after {
     height: 2px;
     background: #60a5fa;
     border-radius: 2px;
-    box-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
-}
-
-nav ul li a {
-    transition: color 0.2s ease;
+    box-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
 }
 
 /* ---------------- FADE SYSTEM ---------------- */
@@ -369,6 +425,41 @@ nav ul li a {
 
 body.loaded .page-fade {
     opacity: 0;
+}
+
+/* ---------------- BACK TO TOP BUTTON ---------------- */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: rgba(37, 99, 235, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: rgba(37, 99, 235, 1);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.7);
 }
 
 /* ---------------- RESPONSIVE (mobile) ---------------- */
@@ -400,16 +491,20 @@ body.loaded .page-fade {
         padding: 0 1rem;
     }
 
+    .hero .btn {
+        margin-top: 5rem;          /* slightly less on mobile, still lower */
+    }
+
     .hero-photo {
         width: 180px;
         height: auto !important;
-        border-radius: 12px !important;
+        border-radius: 16px !important;
     }
 
     .main-logo {
         width: 130px;
         max-width: 130px;
-        margin-top: 1.2rem;        /* slightly less on mobile */
+        margin-top: 1.2rem;
     }
 
     section {
