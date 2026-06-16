@@ -313,14 +313,14 @@ footer a:hover {
     box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
 }
 
-/* ---------------- MAIN LOGO (FIXED GAP BELOW BUTTON) ---------------- */
+/* ---------------- MAIN LOGO (now above the button) ---------------- */
 
 .main-logo {
     width: 180px;
     height: auto;
     max-width: 180px;
     display: block;
-    margin: 3rem auto 0 auto;      /* consistent spacing – not dependent on viewport height */
+    margin: 1.5rem auto 0 auto;      /* gap above, button's top margin handles below */
     opacity: 0.8;
     transition: opacity 0.3s;
 }
@@ -409,7 +409,7 @@ body.loaded .page-fade {
     .main-logo {
         width: 130px;
         max-width: 130px;
-        margin-top: 2.5rem;       /* fixed gap, slightly smaller on mobile */
+        margin-top: 1.2rem;        /* slightly less on mobile */
     }
 
     section {
