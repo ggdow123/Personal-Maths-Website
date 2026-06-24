@@ -78,7 +78,7 @@ nav ul li:nth-child(3) {
 nav ul li:nth-child(3)::after {
     content: "";
     position: absolute;
-    right: -1rem;                          /* half of the 2rem gap */
+    right: -1rem;                          /* half of 2rem gap */
     top: 50%;
     transform: translateY(-50%);
     width: 1.5px;
@@ -484,6 +484,11 @@ body.loaded .page-fade {
     nav ul {
         gap: 0.6rem;
         font-size: 0.85rem;
+    }
+
+    /* Adjust separator to stay centered in the smaller gap */
+    nav ul li:nth-child(3)::after {
+        right: -0.3rem;        /* half of 0.6rem */
     }
 
     .hero h1 {
