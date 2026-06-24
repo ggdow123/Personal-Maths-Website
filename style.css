@@ -69,16 +69,18 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* ---------------- SEPARATOR BEFORE TUTORING LINK (centered in the gap) ---------------- */
+/* ---------------- SEPARATOR BEFORE TUTORING (equal spacing) ---------------- */
 
+/* Gallery list item — add extra space to double the gap, centring the bar */
 nav ul li:nth-child(3) {
+    margin-right: 2rem;          /* makes total gap = 4rem (2rem normal + 2rem extra) */
     position: relative;
 }
 
 nav ul li:nth-child(3)::after {
     content: "";
     position: absolute;
-    right: -1rem;                          /* half of 2rem gap */
+    right: -2rem;                /* half of the total 4rem gap → centered perfectly */
     top: 50%;
     transform: translateY(-50%);
     width: 1.5px;
@@ -486,9 +488,13 @@ body.loaded .page-fade {
         font-size: 0.85rem;
     }
 
-    /* Adjust separator to stay centered in the smaller gap */
+    /* Equal spacing on mobile: total gap = 1.2rem, bar centred */
+    nav ul li:nth-child(3) {
+        margin-right: 0.6rem;
+    }
+
     nav ul li:nth-child(3)::after {
-        right: -0.3rem;        /* half of 0.6rem */
+        right: -0.6rem;
     }
 
     .hero h1 {
