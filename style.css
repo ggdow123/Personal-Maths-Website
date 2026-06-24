@@ -69,28 +69,22 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* ---------------- TUTORING LINK IN NAV (distinct separator) ---------------- */
+/* ---------------- SEPARATOR BEFORE TUTORING LINK (centered in the gap) ---------------- */
 
-nav ul li a[href="tutoring.html"] {
-    color: #93c5fd;                              /* softer blue to stand out */
+nav ul li:nth-child(3) {
     position: relative;
-    padding-left: 1.8rem;                        /* room for the bar */
 }
 
-nav ul li a[href="tutoring.html"]::before {
+nav ul li:nth-child(3)::after {
     content: "";
     position: absolute;
-    left: 0;
+    right: -1rem;                          /* half of the 2rem gap */
     top: 50%;
     transform: translateY(-50%);
-    width: 2px;
-    height: 1.4em;                               /* bar height */
-    background: rgba(147, 197, 253, 0.5);        /* matching soft blue bar */
+    width: 1.5px;
+    height: 1.4em;
+    background: rgba(147, 197, 253, 0.5);
     border-radius: 1px;
-}
-
-nav ul li a[href="tutoring.html"]:hover {
-    color: #ffffff;
 }
 
 /* ---------------- HERO (HOME) ---------------- */
@@ -222,9 +216,8 @@ nav ul li a[href="tutoring.html"]:hover {
     box-shadow: 0 8px 30px rgba(37, 99, 235, 0.7);
 }
 
-/* Special overrides for the hero button to sit lower */
 .hero .btn {
-    margin-top: 7rem;          /* pushes button further down */
+    margin-top: 7rem;
 }
 
 /* ---------------- LAYOUT ---------------- */
@@ -365,7 +358,7 @@ footer a:hover {
     transform: rotate(10deg) scale(1.1);
 }
 
-/* ---------------- HERO PHOTO (NO ANIMATION, STILL RECTANGULAR) ---------------- */
+/* ---------------- HERO PHOTO ---------------- */
 
 .hero-photo {
     width: 240px;
@@ -373,7 +366,6 @@ footer a:hover {
     max-width: 100%;
     display: block;
     margin: 0 auto 1.5rem auto;
-
     object-fit: contain !important;
     border: 3px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px !important;
@@ -387,7 +379,7 @@ footer a:hover {
     border-color: rgba(37, 99, 235, 0.6);
 }
 
-/* ---------------- MAIN LOGO (SOFTER SHADOW) ---------------- */
+/* ---------------- MAIN LOGO ---------------- */
 
 .main-logo {
     width: 180px;
@@ -397,7 +389,7 @@ footer a:hover {
     margin: 1.5rem auto 0 auto;
     opacity: 0.8;
     transition: opacity 0.3s, filter 0.3s;
-    filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.2));   /* dialled back */
+    filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.2));
 }
 
 .main-logo:hover {
@@ -508,7 +500,7 @@ body.loaded .page-fade {
     }
 
     .hero .btn {
-        margin-top: 5rem;          /* slightly less on mobile, still lower */
+        margin-top: 5rem;
     }
 
     .hero-photo {
