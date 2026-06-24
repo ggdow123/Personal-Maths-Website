@@ -69,6 +69,30 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
+/* ---------------- TUTORING LINK IN NAV (distinct separator) ---------------- */
+
+nav ul li a[href="tutoring.html"] {
+    color: #93c5fd;                              /* softer blue to stand out */
+    position: relative;
+    padding-left: 1.8rem;                        /* room for the bar */
+}
+
+nav ul li a[href="tutoring.html"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 1.4em;                               /* bar height */
+    background: rgba(147, 197, 253, 0.5);        /* matching soft blue bar */
+    border-radius: 1px;
+}
+
+nav ul li a[href="tutoring.html"]:hover {
+    color: #ffffff;
+}
+
 /* ---------------- HERO (HOME) ---------------- */
 
 .hero {
