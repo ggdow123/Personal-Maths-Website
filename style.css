@@ -28,7 +28,7 @@ body {
     100% { background-color: #111d34; }
 }
 
-/* ---------------- NAV ---------------- */
+/* ---------------- NAV (base) ---------------- */
 
 nav {
     position: fixed;
@@ -94,7 +94,7 @@ nav > ul li:nth-child(3)::after {
     align-items: center;
     flex-wrap: nowrap;
     gap: 0;
-    height: 100%;               /* match parent height */
+    height: 100%;
 }
 
 .nav-sections {
@@ -103,7 +103,7 @@ nav > ul li:nth-child(3)::after {
     gap: 2rem;
     margin: 0;
     padding: 0;
-    align-items: center;        /* vertical centering */
+    align-items: center;
     height: 100%;
 }
 
@@ -113,7 +113,7 @@ nav > ul li:nth-child(3)::after {
     font-weight: 400;
     transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
     display: inline-block;
-    line-height: 70px;          /* aligns with nav height */
+    line-height: 70px;
 }
 
 .nav-sections a:hover {
@@ -122,9 +122,9 @@ nav > ul li:nth-child(3)::after {
     transform: translateY(-1px);
 }
 
-/* No stray separators */
+/* Kill stray separators inside tutoring nav */
 .nav-sections li::after {
-    display: none;
+    display: none !important;
 }
 
 /* Dedicated separator bar */
@@ -147,7 +147,7 @@ nav > ul li:nth-child(3)::after {
     white-space: nowrap;
     transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
     display: inline-block;
-    line-height: 70px;          /* aligns with nav height */
+    line-height: 70px;
 }
 
 .nav-page-link:hover {
@@ -297,6 +297,16 @@ section:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(37, 99, 235, 0.1);
     border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Overview wrapper – invisible, just for scroll targeting */
+.overview-section {
+    background: none !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 /* ---------------- CARDS ---------------- */
@@ -577,7 +587,7 @@ body.loaded .page-fade {
     }
 
     .nav-sections a {
-        line-height: normal;       /* reset line-height on mobile */
+        line-height: normal;
     }
 
     .nav-separator {
