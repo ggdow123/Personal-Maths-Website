@@ -127,14 +127,14 @@ nav > ul li:nth-child(3)::after {
     display: none !important;
 }
 
-/* Dedicated separator bar */
+/* Dedicated separator bar – now matches homepage divider exactly */
 .nav-separator {
     display: block;
     width: 1.5px;
-    height: 1.8em;
+    height: 1.4em;               /* identical to homepage bar */
     background: rgba(147, 197, 253, 0.5);
     border-radius: 1px;
-    margin: 0 1.5rem;
+    margin: 0 2rem;              /* 2rem gap on each side – total 4rem, centred */
     flex-shrink: 0;
     align-self: center;
 }
@@ -590,9 +590,10 @@ body.loaded .page-fade {
         line-height: normal;
     }
 
+    /* Separator – scaled to match mobile homepage */
     .nav-separator {
-        margin: 0 0.7rem;
-        height: 1.5em;
+        margin: 0 0.6rem;
+        height: 1.4em;
     }
 
     .nav-page-link {
