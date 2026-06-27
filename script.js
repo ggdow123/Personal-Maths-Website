@@ -1,11 +1,7 @@
-// ------------------- PAGE READY -------------------
-
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Biography site loaded successfully.");
 });
 
-
-// ------------------- SCROLL SPY -------------------
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a, .nav-sections a");
@@ -35,16 +31,12 @@ window.addEventListener("scroll", () => {
 });
 
 
-// ------------------- FADE IN -------------------
-
 document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(() => {
         document.body.classList.add("loaded");
     });
 });
 
-
-// ------------------- FADE OUT NAVIGATION -------------------
 
 document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
