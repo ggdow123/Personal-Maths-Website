@@ -9,7 +9,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-9ZSGHB6P75');
 </script>
     
@@ -38,18 +37,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     <a href="index.html" class="logo">
         <img src="images/favicon.png" alt="Home">
     </a>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="tutoring.html">Tutoring</a></li>
-    </ul>
+
+    <!-- In‑page section links, boxed -->
+    <div class="nav-group">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </div>
+
+    <!-- Separator -->
+    <span class="nav-separator"></span>
+
+    <!-- Page‑level call‑to‑action -->
+    <a href="tutoring.html" class="nav-cta">Tutoring</a>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
     <div class="hero-content">
-        <!-- Your photo -->
         <img class="hero-photo" src="images/photo5.jpeg" alt="George Dow">
 
         <h1>George Dow</h1>
@@ -57,7 +65,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             University of Bristol Mathematics student and tutor
         </p>
 
-        <!-- Transparent logo (above the button) -->
         <img class="main-logo" src="images/favicon-transparent.png" alt="Logo">
 
         <a href="tutoring.html" class="btn">
@@ -69,7 +76,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <!-- MAIN CONTENT -->
 <div class="container">
 
-    <!-- ABOUT -->
     <section id="about">
         <h2>About Me</h2>
         <p>
@@ -83,72 +89,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         </p>
     </section>
 
-    <!-- INTERESTS -->
     <section id="interests">
         <h2>Interests in Maths</h2>
         <div class="interest-grid">
-
             <div class="card">
                 <div class="chalk-icon">
                     <svg viewBox="0 0 100 100" width="60" height="60">
-                        <text x="50" y="70"
-                              text-anchor="middle"
-                              font-size="70"
-                              fill="none"
-                              stroke="white"
-                              stroke-width="2"
-                              font-family="serif">
-                              P
-                        </text>
+                        <text x="50" y="70" text-anchor="middle" font-size="70" fill="none" stroke="white" stroke-width="2" font-family="serif">P</text>
                     </svg>
                 </div>
                 <h3>Probability and Stochastic Processes</h3>
             </div>
-          
             <div class="card">
                 <i class="fas fa-chart-line"></i>
                 <h3>Statistical Theory and Inference</h3>
             </div>
-
             <div class="card">
                 <i class="fas fa-code"></i>
                 <h3>Machine Learning and Data Science</h3>
             </div>
-
             <div class="card">
                 <i class="fas fa-sliders"></i>
                 <h3>Optimisation and Numerical Methods</h3>
-            </div>          
-          
-
-          
+            </div>
         </div>
     </section>
 
-    <!-- GALLERY -->
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="image-gallery">
             <div class="image-item">
                 <img src="images/photo1.jpeg" alt="">
-                 <p class="caption">Le Mont-Saint-Michel</p>
+                <p class="caption">Le Mont-Saint-Michel</p>
             </div>
             <div class="image-item">
                 <img src="images/photo2.jpeg" alt="">
-                 <p class="caption">Park Street, Bristol</p>
+                <p class="caption">Park Street, Bristol</p>
             </div>
             <div class="image-item">
                 <img src="images/photo3.jpeg" alt="">
-                 <p class="caption">Calvi, Corse</p>
+                <p class="caption">Calvi, Corse</p>
             </div>
             <div class="image-item">
                 <img src="images/photo4.jpeg" alt="">
-                 <p class="caption">Probability lecture notes</p>
+                <p class="caption">Probability lecture notes</p>
             </div>
         </div>
     </section>
 
-    <!-- TUTORING -->
     <section>
         <h2>Tutoring</h2>
         <p>
@@ -164,21 +152,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 </div>
 
-<!-- FOOTER -->
 <footer>
     <p>
         Contact:
-        <a href="mailto:glider.toga-7q@icloud.com">
-            glider.toga-7q@icloud.com
-        </a>
+        <a href="mailto:glider.toga-7q@icloud.com">glider.toga-7q@icloud.com</a>
     </p>
-    <p>
-        (This email forwards to mine to help manage spam/bots)
-    </p>
+    <p>(This email forwards to mine to help manage spam/bots)</p>
     <p>© 2026 George Dow. All rights reserved.</p>
 </footer>
 
-<!-- BACK TO TOP BUTTON -->
 <button class="back-to-top" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
 </button>
