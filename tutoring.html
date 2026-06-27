@@ -66,10 +66,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 <div class="container">
 
-    <!-- OVERVIEW WRAPPER (now a section so scroll spy works) -->
+    <!-- OVERVIEW WRAPPER (scroll spy will now use this section only) -->
     <section id="overview" class="overview-section">
 
-        <section id="what-i-offer">
+        <!-- Child section: What I Offer – no id, so spy ignores it -->
+        <section>
             <h2>What I Offer</h2>
             <div class="interest-grid">
                 <div class="card">
@@ -100,7 +101,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             </div>
         </section>
 
-        <section id="my-approach">
+        <!-- Child section: My Approach – no id -->
+        <section>
             <h2>My Approach</h2>
             <p>
                 I have all the relevant textbooks and access to
