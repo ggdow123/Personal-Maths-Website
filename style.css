@@ -48,7 +48,7 @@ nav {
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-    font-size: 1rem;          /* 🔁 guarantees both navs start from the same base */
+    font-size: 1rem;
 }
 
 /* ---- HOMEPAGE NAV (direct ul) ---- */
@@ -85,7 +85,7 @@ nav > ul li:nth-child(3)::after {
     top: 50%;
     transform: translateY(-50%);
     width: 1.5px;
-    height: 1.4em;
+    height: 1.4rem;                         /* now uses rem, same as tutoring */
     background: rgba(147, 197, 253, 0.5);
     border-radius: 1px;
 }
@@ -133,13 +133,12 @@ nav > ul li:nth-child(3)::after {
 .nav-separator {
     display: block;
     width: 1.5px;
-    height: 1.4em;
+    height: 1.4rem;                         /* identical fixed size */
     background: rgba(147, 197, 253, 0.5);
     border-radius: 1px;
     margin: 0 2rem;
     flex-shrink: 0;
     align-self: center;
-    font-size: inherit;        /* 🔁 picks up nav’s 1rem exactly like the homepage */
 }
 
 /* Home link (page-level) */
@@ -583,10 +582,10 @@ body.loaded .page-fade {
         right: -0.6rem;
     }
 
-    /* Tutoring nav */
+    /* Tutoring nav – match homepage font size */
     .nav-sections {
         gap: 0.6rem;
-        font-size: 0.8rem;
+        font-size: 0.85rem;                /* was 0.8rem, now identical */
     }
 
     .nav-sections a {
@@ -595,11 +594,11 @@ body.loaded .page-fade {
 
     .nav-separator {
         margin: 0 0.6rem;
-        height: 1.4em;
+        height: 1.4rem;                    /* fixed size, no em scaling */
     }
 
     .nav-page-link {
-        font-size: 0.85rem;
+        font-size: 0.85rem;                /* match the sections */
         line-height: normal;
     }
 
