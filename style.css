@@ -28,7 +28,7 @@ body {
     100% { background-color: #111d34; }
 }
 
-/* ---------------- NAV (base) ---------------- */
+/* ---------------- NAV ---------------- */
 
 nav {
     position: fixed;
@@ -49,10 +49,10 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* ---------------- HOMEPAGE NAV (plain ul) ---------------- */
-nav ul {
+/* ---- HOMEPAGE NAV (direct ul) ---- */
+nav > ul {
     display: flex;
-    list-style: none;          /* removes bullets */
+    list-style: none;
     gap: 2rem;
 }
 
@@ -70,14 +70,13 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* ---------------- HOMEPAGE SEPARATOR (before Tutoring) ---------------- */
-
-nav ul li:nth-child(3) {
+/* ---- HOMEPAGE SEPARATOR (before Tutoring) – only for direct ul ---- */
+nav > ul li:nth-child(3) {
     margin-right: 2rem;
     position: relative;
 }
 
-nav ul li:nth-child(3)::after {
+nav > ul li:nth-child(3)::after {
     content: "";
     position: absolute;
     right: -2rem;
@@ -89,13 +88,13 @@ nav ul li:nth-child(3)::after {
     border-radius: 1px;
 }
 
-/* ---------------- TUTORING PAGE NAV (no wrapping) ---------------- */
-
+/* ---- TUTORING PAGE NAV (single row, perfectly aligned) ---- */
 .nav-tutoring {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;          /* keep everything on one line */
+    flex-wrap: nowrap;
     gap: 0;
+    height: 100%;               /* match parent height */
 }
 
 .nav-sections {
@@ -104,7 +103,8 @@ nav ul li:nth-child(3)::after {
     gap: 2rem;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
+    align-items: center;        /* vertical centering */
+    height: 100%;
 }
 
 .nav-sections a {
@@ -113,6 +113,7 @@ nav ul li:nth-child(3)::after {
     font-weight: 400;
     transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
     display: inline-block;
+    line-height: 70px;          /* aligns with nav height */
 }
 
 .nav-sections a:hover {
@@ -121,6 +122,12 @@ nav ul li:nth-child(3)::after {
     transform: translateY(-1px);
 }
 
+/* No stray separators */
+.nav-sections li::after {
+    display: none;
+}
+
+/* Dedicated separator bar */
 .nav-separator {
     display: block;
     width: 1.5px;
@@ -129,8 +136,10 @@ nav ul li:nth-child(3)::after {
     border-radius: 1px;
     margin: 0 1.5rem;
     flex-shrink: 0;
+    align-self: center;
 }
 
+/* Home link (page-level) */
 .nav-page-link {
     color: white;
     text-decoration: none;
@@ -138,6 +147,7 @@ nav ul li:nth-child(3)::after {
     white-space: nowrap;
     transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
     display: inline-block;
+    line-height: 70px;          /* aligns with nav height */
 }
 
 .nav-page-link:hover {
@@ -175,7 +185,6 @@ nav ul li:nth-child(3)::after {
     animation: glowMoveTut 14s ease-in-out infinite alternate;
 }
 
-/* animations */
 @keyframes glowMove {
     0% { background-position: 20% 30%, 80% 70%; }
     100% { background-position: 30% 40%, 70% 60%; }
@@ -195,14 +204,8 @@ nav ul li:nth-child(3)::after {
 }
 
 @keyframes heroFade {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(-40px);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(-40px); }
 }
 
 .hero-tutoring .hero-content {
@@ -210,14 +213,8 @@ nav ul li:nth-child(3)::after {
 }
 
 @keyframes heroFadeTutoring {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(-10px);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(-10px); }
 }
 
 .hero h1 {
@@ -459,12 +456,12 @@ footer a:hover {
 /* ---------------- ACTIVE LINK STYLES ---------------- */
 
 /* Homepage nav active */
-nav ul li a.active {
+nav > ul li a.active {
     color: #60a5fa;
     position: relative;
 }
 
-nav ul li a.active::after {
+nav > ul li a.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -560,23 +557,27 @@ body.loaded .page-fade {
     }
 
     /* Homepage nav */
-    nav ul {
+    nav > ul {
         gap: 0.6rem;
         font-size: 0.85rem;
     }
 
-    nav ul li:nth-child(3) {
+    nav > ul li:nth-child(3) {
         margin-right: 0.6rem;
     }
 
-    nav ul li:nth-child(3)::after {
+    nav > ul li:nth-child(3)::after {
         right: -0.6rem;
     }
 
-    /* Tutoring nav – keep on one line, shrink gaps */
+    /* Tutoring nav */
     .nav-sections {
         gap: 0.6rem;
         font-size: 0.8rem;
+    }
+
+    .nav-sections a {
+        line-height: normal;       /* reset line-height on mobile */
     }
 
     .nav-separator {
@@ -586,6 +587,7 @@ body.loaded .page-fade {
 
     .nav-page-link {
         font-size: 0.85rem;
+        line-height: normal;
     }
 
     .hero h1 {
