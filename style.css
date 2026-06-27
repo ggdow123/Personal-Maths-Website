@@ -49,44 +49,87 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+/* ---- Group box for in‑page section links ---- */
+.nav-group {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    padding: 0.4rem 0.6rem;
+    backdrop-filter: blur(10px);
 }
 
-nav a {
+.nav-group ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-group a {
     color: white;
     text-decoration: none;
     font-weight: 400;
-    transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
-    display: inline-block;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-nav a:hover {
+.nav-group a:hover {
     color: #93c5fd;
-    text-shadow: 0 0 12px rgba(147, 197, 253, 0.7);
-    transform: translateY(-1px);
+    text-shadow: 0 0 8px rgba(147, 197, 253, 0.6);
 }
 
-/* ---------------- SEPARATOR BEFORE TUTORING (equal spacing) ---------------- */
+/* ---- Separator line ---- */
+.nav-separator {
+    display: block;
+    width: 1.5px;
+    height: 1.8em;
+    background: rgba(147, 197, 253, 0.4);
+    border-radius: 1px;
+    margin: 0 1rem;
+}
 
-/* Gallery list item — add extra space to double the gap, centring the bar */
-nav ul li:nth-child(3) {
-    margin-right: 2rem;          /* makes total gap = 4rem (2rem normal + 2rem extra) */
+/* ---- Pill‑shaped page link (Home / Tutoring) ---- */
+.nav-cta {
+    background: rgba(37, 99, 235, 0.25);
+    color: #93c5fd;
+    padding: 0.45rem 1.2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.nav-cta:hover {
+    background: rgba(37, 99, 235, 0.5);
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.5);
+    transform: translateY(-2px);
+}
+
+/* ---- Active state for group links ---- */
+.nav-group a.active {
+    color: #60a5fa;
     position: relative;
 }
 
-nav ul li:nth-child(3)::after {
+.nav-group a.active::after {
     content: "";
     position: absolute;
-    right: -2rem;                /* half of the total 4rem gap → centered perfectly */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.5px;
-    height: 1.4em;
-    background: rgba(147, 197, 253, 0.5);
-    border-radius: 1px;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: #60a5fa;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+}
+
+/* No active underline for the pill */
+.nav-cta.active {
+    background: rgba(37, 99, 235, 0.55);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
 }
 
 /* ---------------- HERO (HOME) ---------------- */
@@ -118,7 +161,6 @@ nav ul li:nth-child(3)::after {
     animation: glowMoveTut 14s ease-in-out infinite alternate;
 }
 
-/* animations */
 @keyframes glowMove {
     0% { background-position: 20% 30%, 80% 70%; }
     100% { background-position: 30% 40%, 70% 60%; }
@@ -138,14 +180,8 @@ nav ul li:nth-child(3)::after {
 }
 
 @keyframes heroFade {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(-40px);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(-40px); }
 }
 
 .hero-tutoring .hero-content {
@@ -153,14 +189,8 @@ nav ul li:nth-child(3)::after {
 }
 
 @keyframes heroFadeTutoring {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(-10px);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(-10px); }
 }
 
 .hero h1 {
@@ -399,25 +429,6 @@ footer a:hover {
     filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.4));
 }
 
-/* ---------------- NAV ACTIVE ---------------- */
-
-nav ul li a.active {
-    color: #60a5fa;
-    position: relative;
-}
-
-nav ul li a.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 2px;
-    background: #60a5fa;
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
-}
-
 /* ---------------- FADE SYSTEM ---------------- */
 
 .page-fade {
@@ -481,20 +492,31 @@ body.loaded .page-fade {
 
     nav {
         padding: 0 3%;
+        flex-wrap: wrap;
     }
 
-    nav ul {
-        gap: 0.6rem;
-        font-size: 0.85rem;
+    .nav-group {
+        order: 3;
+        width: 100%;
+        margin-top: 0.5rem;
+        border-radius: 30px;
+        padding: 0.3rem 0.4rem;
     }
 
-    /* Equal spacing on mobile: total gap = 1.2rem, bar centred */
-    nav ul li:nth-child(3) {
-        margin-right: 0.6rem;
+    .nav-group ul {
+        gap: 0.8rem;
+        font-size: 0.8rem;
+        justify-content: center;
     }
 
-    nav ul li:nth-child(3)::after {
-        right: -0.6rem;
+    .nav-separator {
+        display: none;   /* hide separator on mobile to save space; box still distinct */
+    }
+
+    .nav-cta {
+        margin-left: auto;   /* push pill to the right */
+        padding: 0.35rem 0.9rem;
+        font-size: 0.8rem;
     }
 
     .hero h1 {
