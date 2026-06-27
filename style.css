@@ -47,6 +47,8 @@ nav {
     -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    font-size: 1rem;          /* 🔁 guarantees both navs start from the same base */
 }
 
 /* ---- HOMEPAGE NAV (direct ul) ---- */
@@ -127,16 +129,17 @@ nav > ul li:nth-child(3)::after {
     display: none !important;
 }
 
-/* Dedicated separator bar – now matches homepage divider exactly */
+/* Dedicated separator bar – now perfectly matches homepage */
 .nav-separator {
     display: block;
     width: 1.5px;
-    height: 1.4em;               /* identical to homepage bar */
+    height: 1.4em;
     background: rgba(147, 197, 253, 0.5);
     border-radius: 1px;
-    margin: 0 2rem;              /* 2rem gap on each side – total 4rem, centred */
+    margin: 0 2rem;
     flex-shrink: 0;
     align-self: center;
+    font-size: inherit;        /* 🔁 picks up nav’s 1rem exactly like the homepage */
 }
 
 /* Home link (page-level) */
@@ -590,7 +593,6 @@ body.loaded .page-fade {
         line-height: normal;
     }
 
-    /* Separator – scaled to match mobile homepage */
     .nav-separator {
         margin: 0 0.6rem;
         height: 1.4em;
