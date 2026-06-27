@@ -51,7 +51,7 @@ nav {
     font-size: 1rem;
 }
 
-/* ---- HOMEPAGE NAV (direct ul) ---- */
+/* ---- HOMEPAGE NAV ---- */
 nav > ul {
     display: flex;
     list-style: none;
@@ -72,7 +72,7 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* ---- HOMEPAGE SEPARATOR (before Tutoring) – only for direct ul ---- */
+/* ---- HOMEPAGE SEPARATOR (before Tutoring) ---- */
 nav > ul li:nth-child(3) {
     margin-right: 2rem;
     position: relative;
@@ -85,12 +85,12 @@ nav > ul li:nth-child(3)::after {
     top: 50%;
     transform: translateY(-50%);
     width: 1.5px;
-    height: 1.4rem;                         /* now uses rem, same as tutoring */
+    height: 1.4rem;
     background: rgba(147, 197, 253, 0.5);
     border-radius: 1px;
 }
 
-/* ---- TUTORING PAGE NAV (single row, perfectly aligned) ---- */
+/* ---- TUTORING PAGE NAV ---- */
 .nav-tutoring {
     display: flex;
     align-items: center;
@@ -124,16 +124,14 @@ nav > ul li:nth-child(3)::after {
     transform: translateY(-1px);
 }
 
-/* Kill stray separators inside tutoring nav */
 .nav-sections li::after {
     display: none !important;
 }
 
-/* Dedicated separator bar – now perfectly matches homepage */
 .nav-separator {
     display: block;
     width: 1.5px;
-    height: 1.4rem;                         /* identical fixed size */
+    height: 1.4rem;
     background: rgba(147, 197, 253, 0.5);
     border-radius: 1px;
     margin: 0 2rem;
@@ -141,7 +139,6 @@ nav > ul li:nth-child(3)::after {
     align-self: center;
 }
 
-/* Home link (page-level) */
 .nav-page-link {
     color: white;
     text-decoration: none;
@@ -301,7 +298,6 @@ section:hover {
     border-color: rgba(37, 99, 235, 0.2);
 }
 
-/* Overview wrapper – invisible, just for scroll targeting */
 .overview-section {
     background: none !important;
     backdrop-filter: none !important;
@@ -467,7 +463,6 @@ footer a:hover {
 
 /* ---------------- ACTIVE LINK STYLES ---------------- */
 
-/* Homepage nav active */
 nav > ul li a.active {
     color: #60a5fa;
     position: relative;
@@ -485,7 +480,6 @@ nav > ul li a.active::after {
     box-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
 }
 
-/* Tutoring nav active */
 .nav-sections a.active {
     color: #60a5fa;
     position: relative;
@@ -568,24 +562,24 @@ body.loaded .page-fade {
         padding: 0 3%;
     }
 
-    /* Homepage nav */
+    /* Homepage */
     nav > ul {
-        gap: 0.6rem;
-        font-size: 0.85rem;
+        gap: 0.5rem;
+        font-size: 0.8rem;
     }
 
     nav > ul li:nth-child(3) {
-        margin-right: 0.6rem;
+        margin-right: 0.5rem;
     }
 
     nav > ul li:nth-child(3)::after {
-        right: -0.6rem;
+        right: -0.5rem;
     }
 
-    /* Tutoring nav – match homepage font size */
+    /* Tutoring */
     .nav-sections {
-        gap: 0.6rem;
-        font-size: 0.85rem;                /* was 0.8rem, now identical */
+        gap: 0.5rem;
+        font-size: 0.8rem;
     }
 
     .nav-sections a {
@@ -593,12 +587,12 @@ body.loaded .page-fade {
     }
 
     .nav-separator {
-        margin: 0 0.6rem;
-        height: 1.4rem;                    /* fixed size, no em scaling */
+        margin: 0 0.5rem;
+        height: 1.4rem;
     }
 
     .nav-page-link {
-        font-size: 0.85rem;                /* match the sections */
+        font-size: 0.8rem;
         line-height: normal;
     }
 
