@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ------------------- SCROLL SPY -------------------
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
+const navLinks = document.querySelectorAll("nav ul li a, .nav-sections a");
 
 window.addEventListener("scroll", () => {
     let current = "";
