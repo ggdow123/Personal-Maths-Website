@@ -71,16 +71,15 @@ nav a:hover {
 
 /* ---------------- SEPARATOR BEFORE TUTORING (equal spacing) ---------------- */
 
-/* Gallery list item — add extra space to double the gap, centring the bar */
 nav ul li:nth-child(3) {
-    margin-right: 2rem;          /* makes total gap = 4rem (2rem normal + 2rem extra) */
+    margin-right: 2rem;
     position: relative;
 }
 
 nav ul li:nth-child(3)::after {
     content: "";
     position: absolute;
-    right: -2rem;                /* half of the total 4rem gap → centered perfectly */
+    right: -2rem;
     top: 50%;
     transform: translateY(-50%);
     width: 1.5px;
@@ -118,7 +117,6 @@ nav ul li:nth-child(3)::after {
     animation: glowMoveTut 14s ease-in-out infinite alternate;
 }
 
-/* animations */
 @keyframes glowMove {
     0% { background-position: 20% 30%, 80% 70%; }
     100% { background-position: 30% 40%, 70% 60%; }
@@ -353,11 +351,12 @@ footer a:hover {
     height: 38px;
     object-fit: contain;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;   /* match nav link transition speed */
 }
 
+/* CHANGED: no rotation, just a gentle lift like other nav items */
 .logo img:hover {
-    transform: rotate(10deg) scale(1.1);
+    transform: translateY(-2px);
 }
 
 /* ---------------- HERO PHOTO ---------------- */
@@ -488,7 +487,6 @@ body.loaded .page-fade {
         font-size: 0.85rem;
     }
 
-    /* Equal spacing on mobile: total gap = 1.2rem, bar centred */
     nav ul li:nth-child(3) {
         margin-right: 0.6rem;
     }
