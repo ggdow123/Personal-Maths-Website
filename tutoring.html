@@ -9,7 +9,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-9ZSGHB6P75');
 </script>
     
@@ -37,9 +36,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     <a href="index.html" class="logo">
         <img src="images/favicon.png" alt="Home">
     </a>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-    </ul>
+
+    <!-- Page‑level link (Home pill) -->
+    <a href="index.html" class="nav-cta">Home</a>
+
+    <!-- Separator -->
+    <span class="nav-separator"></span>
+
+    <!-- In‑page section links, boxed -->
+    <div class="nav-group">
+        <ul>
+            <li><a href="#what-i-offer">What I Offer</a></li>
+            <li><a href="#my-approach">My Approach</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#availability">Availability</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 </nav>
 
 <header class="hero hero-tutoring">
@@ -56,95 +70,81 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 <div class="container">
 
-    <section>
+    <section id="what-i-offer">
         <h2>What I Offer</h2>
         <div class="interest-grid">
             <div class="card">
                 <i class="fas fa-user-tie"></i>
                 <h3>Tailored learning</h3>
-                <p>I teach by topic and work with the student to find
-                    a teaching style that makes maths exciting</p>
+                <p>I teach by topic and work with the student to find a teaching style that makes maths exciting</p>
             </div>
             <div class="card">
                 <i class="fas fa-bars"></i>
                 <h3>A range of levels</h3>
-                <p>I can tutor any board up to A-level standard maths.
-                    Get in touch for more information on tutoring for
-                    further maths and university preparation</p>
+                <p>I can tutor any board up to A-level standard maths. Get in touch for more information on tutoring for further maths and university preparation</p>
             </div>
             <div class="card">
                 <i class="fas fa-computer"></i>
                 <h3>iDroo interactive shared whiteboard</h3>
-                <p>Online tutoring uses iDroo, an online whiteboard
-                    software built for maths</p>
+                <p>Online tutoring uses iDroo, an online whiteboard software built for maths</p>
             </div>
             <div class="card">
                 <i class="fas fa-handshake"></i>
                 <h3>In-person tutoring</h3>
-                <p>I am based in Devon and can also offer
-                    in-person tutoring on a limited basis</p>
+                <p>I am based in Devon and can also offer in-person tutoring on a limited basis</p>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="my-approach">
         <h2>My Approach</h2>
         <p>
-            I have all the relevant textbooks and access to
-            topic worksheets for all levels. I typically
-            begin with a free session that covers a relevant
-            end of year paper. Then, I move to topic specific
-            work with your goals in mind. </p>
-            <br>
-        <p>  
-            I try to give the student lots of oppurtunity to
-            control the material covered and how it is covered
+            I have all the relevant textbooks and access to topic worksheets for all levels. I typically
+            begin with a free session that covers a relevant end of year paper. Then, I move to topic specific
+            work with your goals in mind.
+        </p>
+        <br>
+        <p>
+            I try to give the student lots of oppurtunity to control the material covered and how it is covered
             as this has proven effective in increasing engagement.
         </p>
     </section>
 
-    <section>
+    <section id="experience">
         <h2>Experience</h2>
         <p>
-           Whilst I was in 6th form i ran the junior school maths
-            club as part of my DofE volunteering. This gave me a
-            year's experience of teaching a whole class before
-            I left school. Although individual tutoring is very
-            different, many of the same principles apply and I
-            now have a further year's experience in tutoring.</p>
+           Whilst I was in 6th form i ran the junior school maths club as part of my DofE volunteering. This gave me a
+            year's experience of teaching a whole class before I left school. Although individual tutoring is very
+            different, many of the same principles apply and I now have a further year's experience in tutoring.
+        </p>
         <br>
-         <p>
-            I have tutored students who were falling behind 
-            with their maths as well as others looking for 
-            extension work. I also have experience tutoring
-            neurodiverse children.
-            
+        <p>
+            I have tutored students who were falling behind with their maths as well as others looking for
+            extension work. I also have experience tutoring neurodiverse children.
         </p>
     </section>
 
-    <section>
+    <section id="availability">
         <h2>Availability</h2>
         <div class="card">
             <p>
                 - Online sessions generally available all year<br>
-                - In person sessions are mainly available in Summer<br>  
+                - In person sessions are mainly available in Summer<br>
                 - Little availability in Christmas and May exam seasons<br>
             </p>
         </div>
     </section>
 
-    <section>
+    <section id="pricing">
         <h2>Pricing</h2>
         <p style="text-align:center; margin-bottom:1.5rem;">Sessions can be any length</p>
-        <div class="interest-grid">
-        </div>
         <div class="card">
             <i class="fas fa-square-root-variable"></i>
             <h3>Pre-GCSE, GCSE &amp; A‑Level</h3>
             <p style="font-size:1.3rem; font-weight:600;">£25</p>
             <p>Per hour</p>
         </div>
-        <br> <br>
+        <br><br>
         <div class="card">
             <i class="fas fa-infinity"></i>
             <h3>Further Maths &amp; Pre‑Uni</h3>
@@ -153,7 +153,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         </div>
     </section>
 
-    <section>
+    <section id="contact">
         <h2>Contact</h2>
         <p>
             If you want to know more, feel free to get in touch:
@@ -168,9 +168,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <footer>
     <p>
         Contact:
-        <a href="mailto:glider.toga-7q@icloud.com">
-            glider.toga-7q@icloud.com
-        </a>
+        <a href="mailto:glider.toga-7q@icloud.com">glider.toga-7q@icloud.com</a>
     </p>
     <p>(This email forwards to mine to help manage bots)</p>
     <p>© 2026 George Dow. All rights reserved.</p>
