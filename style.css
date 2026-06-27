@@ -28,7 +28,7 @@ body {
     100% { background-color: #111d34; }
 }
 
-/* ---------------- NAV ---------------- */
+/* ---------------- NAV (base) ---------------- */
 
 nav {
     position: fixed;
@@ -49,14 +49,55 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* ---- Right‑side block (sections + separator + page link) ---- */
-.nav-right {
+/* ---------------- HOMEPAGE NAV (plain ul) ---------------- */
+
+nav ul {
     display: flex;
-    align-items: center;
-    gap: 0;
+    list-style: none;
+    gap: 2rem;
 }
 
-/* ---- In‑page section links (same as old nav ul, but with a class) ---- */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #93c5fd;
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.7);
+    transform: translateY(-1px);
+}
+
+/* ---------------- HOMEPAGE SEPARATOR (before Tutoring) ---------------- */
+
+nav ul li:nth-child(3) {
+    margin-right: 2rem;
+    position: relative;
+}
+
+nav ul li:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5px;
+    height: 1.4em;
+    background: rgba(147, 197, 253, 0.5);
+    border-radius: 1px;
+}
+
+/* ---------------- TUTORING PAGE NAV ---------------- */
+
+.nav-tutoring {
+    display: flex;
+    align-items: center;
+    gap: 0;                /* we control spacing manually */
+}
+
 .nav-sections {
     display: flex;
     list-style: none;
@@ -79,7 +120,6 @@ nav {
     transform: translateY(-1px);
 }
 
-/* ---- Separator bar (shared) ---- */
 .nav-separator {
     display: block;
     width: 1.5px;
@@ -89,7 +129,6 @@ nav {
     margin: 0 1.5rem;
 }
 
-/* ---- Page link (Home) – matches plain link style ---- */
 .nav-page-link {
     color: white;
     text-decoration: none;
@@ -102,30 +141,6 @@ nav {
     color: #93c5fd;
     text-shadow: 0 0 12px rgba(147, 197, 253, 0.7);
     transform: translateY(-1px);
-}
-
-/* Remove any leftover pseudo‑elements from old homepage trick on tutoring */
-.nav-sections li::after {
-    display: none;
-}
-
-/* ---------------- HOMEPAGE SEPARATOR (still works for index nav) ---------------- */
-/* Kept exactly as before, only targets the old ul structure */
-nav ul li:nth-child(3) {
-    margin-right: 2rem;
-    position: relative;
-}
-
-nav ul li:nth-child(3)::after {
-    content: "";
-    position: absolute;
-    right: -2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.5px;
-    height: 1.4em;
-    background: rgba(147, 197, 253, 0.5);
-    border-radius: 1px;
 }
 
 /* ---------------- HERO (HOME) ---------------- */
@@ -157,6 +172,7 @@ nav ul li:nth-child(3)::after {
     animation: glowMoveTut 14s ease-in-out infinite alternate;
 }
 
+/* animations */
 @keyframes glowMove {
     0% { background-position: 20% 30%, 80% 70%; }
     100% { background-position: 30% 40%, 70% 60%; }
@@ -437,9 +453,9 @@ footer a:hover {
     filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.4));
 }
 
-/* ---------------- NAV ACTIVE ---------------- */
+/* ---------------- ACTIVE LINK STYLES ---------------- */
 
-/* Active style for homepage nav links */
+/* Homepage nav active */
 nav ul li a.active {
     color: #60a5fa;
     position: relative;
@@ -457,7 +473,7 @@ nav ul li a.active::after {
     box-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
 }
 
-/* Active style for tutoring page section links */
+/* Tutoring nav active */
 .nav-sections a.active {
     color: #60a5fa;
     position: relative;
@@ -473,11 +489,6 @@ nav ul li a.active::after {
     background: #60a5fa;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
-}
-
-/* No underline for the plain Home page link (optional) */
-.nav-page-link.active {
-    color: #60a5fa;
 }
 
 /* ---------------- FADE SYSTEM ---------------- */
@@ -545,7 +556,7 @@ body.loaded .page-fade {
         padding: 0 3%;
     }
 
-    /* Homepage old nav spacing (if it still uses default ul) */
+    /* Homepage nav */
     nav ul {
         gap: 0.6rem;
         font-size: 0.85rem;
@@ -559,7 +570,7 @@ body.loaded .page-fade {
         right: -0.6rem;
     }
 
-    /* Tutoring page nav: stack sections on one line, shrink separator */
+    /* Tutoring nav */
     .nav-sections {
         gap: 0.6rem;
         font-size: 0.8rem;
