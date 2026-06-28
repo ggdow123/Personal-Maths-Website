@@ -549,9 +549,19 @@ body.loaded .page-fade {
     box-shadow: 0 8px 25px rgba(37, 99, 235, 0.7);
 }
 
-/* ---------------- RESPONSIVE (mobile) ---------------- */
+/* ---------------- RESPONSIVE (desktop 4 columns) ---------------- */
+@media (min-width: 768px) {
+    .interest-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ---------------- RESPONSIVE (mobile) ---------------- */
+@media (max-width: 767px) {
     body {
         padding-top: 70px;
     }
