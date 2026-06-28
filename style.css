@@ -72,7 +72,7 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* ---- HOMEPAGE SEPARATOR (before Tutoring) ---- */
+/* ---- HOMEPAGE SEPARATOR ---- */
 nav > ul li:nth-child(3) {
     margin-right: 2rem;
     position: relative;
@@ -115,7 +115,6 @@ nav > ul li:nth-child(3)::after {
     font-weight: 400;
     transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
     display: inline-block;
-    line-height: 70px;
 }
 
 .nav-sections a:hover {
@@ -146,7 +145,6 @@ nav > ul li:nth-child(3)::after {
     white-space: nowrap;
     transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
     display: inline-block;
-    line-height: 70px;
 }
 
 .nav-page-link:hover {
@@ -562,7 +560,6 @@ body.loaded .page-fade {
         padding: 0 3%;
     }
 
-    /* Homepage */
     nav > ul {
         gap: 0.5rem;
         font-size: 0.8rem;
@@ -576,7 +573,6 @@ body.loaded .page-fade {
         right: -0.5rem;
     }
 
-    /* Tutoring */
     .nav-sections {
         gap: 0.5rem;
         font-size: 0.8rem;
