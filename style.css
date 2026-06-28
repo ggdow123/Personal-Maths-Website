@@ -231,6 +231,14 @@ nav > ul li:nth-child(3)::after {
     color: #e2e8f0;
 }
 
+.hero-author {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #cbd5e1;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
 /* ---------------- BUTTON ---------------- */
 
 .btn {
