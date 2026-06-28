@@ -270,7 +270,7 @@ nav > ul li:nth-child(3)::after {
 }
 
 .hero .btn {
-    margin-top: 7rem;
+    margin-top: 3rem;
 }
 
 /* ---------------- LAYOUT ---------------- */
@@ -321,6 +321,12 @@ section:hover {
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.06);
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s;
+
+    /* vertical centering for equal top/bottom spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card:hover {
@@ -616,7 +622,7 @@ body.loaded .page-fade {
     }
 
     .hero .btn {
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     .hero-photo {
