@@ -360,31 +360,30 @@ section:hover {
     height: 60px;
 }
 
-/* Default icon colour (fallback) */
+/* Default icon colour */
 .card i,
 .card .chalk-icon {
     color: #60a5fa;
 }
 
-/* Interesting blue-themed colours for each card in interest grids */
 .interest-grid .card:nth-child(1) i,
 .interest-grid .card:nth-child(1) .chalk-icon {
-    color: #38bdf8;   /* bright sky blue */
+    color: #22d3ee;
 }
 
 .interest-grid .card:nth-child(2) i,
 .interest-grid .card:nth-child(2) .chalk-icon {
-    color: #818cf8;   /* soft indigo */
+    color: #8b5cf6;
 }
 
 .interest-grid .card:nth-child(3) i,
 .interest-grid .card:nth-child(3) .chalk-icon {
-    color: #60a5fa;   /* original blue */
+    color: #10b981;
 }
 
 .interest-grid .card:nth-child(4) i,
 .interest-grid .card:nth-child(4) .chalk-icon {
-    color: #a78bfa;   /* violet-blue */
+    color: #f59e0b;
 }
 
 .card h3 {
