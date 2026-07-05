@@ -330,7 +330,6 @@ section:hover {
     border: 1px solid rgba(255, 255, 255, 0.06);
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s;
 
-    /* Align content to top so icons and text start at the same vertical position */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,7 +343,7 @@ section:hover {
     background: rgba(37, 99, 235, 0.08);
 }
 
-/* Uniform icon area – all icons sit at the same height */
+/* Uniform icon area */
 .card i,
 .card .chalk-icon {
     height: 60px;
@@ -352,20 +351,44 @@ section:hover {
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    color: #60a5fa;
     font-size: 2.2rem;
     transition: transform 0.3s ease;
 }
 
-/* Ensure the chalk-icon SVG scales properly */
 .card .chalk-icon svg {
     width: 60px;
     height: 60px;
 }
 
-/* Headings start at the same vertical position */
+/* Default icon colour (fallback) */
+.card i,
+.card .chalk-icon {
+    color: #60a5fa;
+}
+
+/* Interesting blue-themed colours for each card in interest grids */
+.interest-grid .card:nth-child(1) i,
+.interest-grid .card:nth-child(1) .chalk-icon {
+    color: #38bdf8;   /* bright sky blue */
+}
+
+.interest-grid .card:nth-child(2) i,
+.interest-grid .card:nth-child(2) .chalk-icon {
+    color: #818cf8;   /* soft indigo */
+}
+
+.interest-grid .card:nth-child(3) i,
+.interest-grid .card:nth-child(3) .chalk-icon {
+    color: #60a5fa;   /* original blue */
+}
+
+.interest-grid .card:nth-child(4) i,
+.interest-grid .card:nth-child(4) .chalk-icon {
+    color: #a78bfa;   /* violet-blue */
+}
+
 .card h3 {
-    margin-top: 0;               /* margin-top is handled by the icon's margin-bottom */
+    margin-top: 0;
 }
 
 .card:hover i,
@@ -379,7 +402,7 @@ section:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    align-items: start;          /* prevents cells from stretching to tallest row */
+    align-items: start;
 }
 
 .image-item {
