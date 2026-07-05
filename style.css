@@ -381,7 +381,7 @@ section:hover {
     color: #f59e0b;
 }
 
-/* Tutoring page – What I Offer icons (different set) */
+/* Tutoring page – What I Offer icons (completely distinct palette) */
 #overview .interest-grid .card:nth-child(1) i,
 #overview .interest-grid .card:nth-child(1) .chalk-icon {
     color: #f472b6;
@@ -389,17 +389,17 @@ section:hover {
 
 #overview .interest-grid .card:nth-child(2) i,
 #overview .interest-grid .card:nth-child(2) .chalk-icon {
-    color: #2dd4bf;
+    color: #facc15;
 }
 
 #overview .interest-grid .card:nth-child(3) i,
 #overview .interest-grid .card:nth-child(3) .chalk-icon {
-    color: #fb923c;
+    color: #38bdf8;
 }
 
 #overview .interest-grid .card:nth-child(4) i,
 #overview .interest-grid .card:nth-child(4) .chalk-icon {
-    color: #818cf8;
+    color: #c084fc;
 }
 
 .card h3 {
