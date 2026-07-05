@@ -360,6 +360,12 @@ section:hover {
     height: 60px;
 }
 
+/* Default icon colour (all cards) */
+.card i,
+.card .chalk-icon {
+    color: #60a5fa;
+}
+
 /* Homepage – Interests in Maths icons */
 .interest-grid .card:nth-child(1) i,
 .interest-grid .card:nth-child(1) .chalk-icon {
@@ -381,7 +387,7 @@ section:hover {
     color: #f59e0b;
 }
 
-/* Tutoring page – What I Offer icons (completely distinct palette) */
+/* Tutoring page – What I Offer icons (distinct palette) */
 #overview .interest-grid .card:nth-child(1) i,
 #overview .interest-grid .card:nth-child(1) .chalk-icon {
     color: #f472b6;
@@ -389,7 +395,7 @@ section:hover {
 
 #overview .interest-grid .card:nth-child(2) i,
 #overview .interest-grid .card:nth-child(2) .chalk-icon {
-    color: #facc15;
+    color: #2dd4bf;   /* changed from yellow to teal */
 }
 
 #overview .interest-grid .card:nth-child(3) i,
@@ -400,6 +406,11 @@ section:hover {
 #overview .interest-grid .card:nth-child(4) i,
 #overview .interest-grid .card:nth-child(4) .chalk-icon {
     color: #c084fc;
+}
+
+/* Pricing icons – always blue */
+#pricing .card i {
+    color: #60a5fa !important;
 }
 
 .card h3 {
