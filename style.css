@@ -313,6 +313,18 @@ section:hover {
     margin-bottom: 0 !important;
 }
 
+/* ---------------- HEADING SPACING ---------------- */
+/* Add a comfortable gap between h2 and following content */
+#about h2,
+#gallery h2,
+#tutoring-section h2,
+#experience h2,
+#availability h2,
+#pricing h2,
+#contact h2 {
+    margin-bottom: 1.5rem;
+}
+
 /* ---------------- CARDS ---------------- */
 
 .interest-grid {
@@ -395,7 +407,7 @@ section:hover {
 
 #overview .interest-grid .card:nth-child(2) i,
 #overview .interest-grid .card:nth-child(2) .chalk-icon {
-    color: #2dd4bf;   /* changed from yellow to teal */
+    color: #2dd4bf;
 }
 
 #overview .interest-grid .card:nth-child(3) i,
