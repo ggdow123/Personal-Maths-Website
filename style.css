@@ -556,21 +556,6 @@ footer a:hover {
     border-color: rgba(37, 99, 235, 0.6);
 }
 
-/* Tutoring page – larger, background‑style photo */
-.hero-tutoring .hero-photo {
-    width: 320px;
-    border: 2px solid rgba(147, 197, 253, 0.3);
-    box-shadow: 0 0 60px rgba(37, 99, 235, 0.25), 0 0 0 10px rgba(15, 23, 42, 0.5);
-    border-radius: 20px !important;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s;
-}
-
-.hero-tutoring .hero-photo:hover {
-    transform: scale(1.03) translateY(-3px);
-    box-shadow: 0 0 80px rgba(37, 99, 235, 0.5), 0 0 0 12px rgba(15, 23, 42, 0.7);
-    border-color: rgba(147, 197, 253, 0.5);
-}
-
 /* ---------------- MAIN LOGO ---------------- */
 
 .main-logo {
@@ -753,11 +738,6 @@ body.loaded .page-fade {
         width: 180px;
         height: auto !important;
         border-radius: 16px !important;
-    }
-
-    /* Keep tutoring photo larger on mobile too, but scale it down a bit */
-    .hero-tutoring .hero-photo {
-        width: 260px;
     }
 
     .main-logo {
